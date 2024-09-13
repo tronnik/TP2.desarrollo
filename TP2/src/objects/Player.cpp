@@ -1,7 +1,6 @@
 #include "Player.h"
 #include "sl.h"
 
-
 Player player1;
 Player player2;
 
@@ -11,15 +10,25 @@ void initValues(Player& player1, Player& player2)
 	player1.posY = screenHeight / 2;
 	player1.width = 15;
 	player1.height = 130;
+	player1.speed = 500;
+	player1.score = 0;
 
 	player2.posX = 790;
 	player2.posY = screenHeight / 2;
 	player2.width = 15;
 	player2.height = 130;
+	player2.speed = 500;
+	player2.score = 0;
 }
 
 void movePlayer(Player& player1, Player& player2)
 {
+	if (slGetKey(SL_KEY_UP)) player2.posY -= player2.speed * slGetDeltaTime();
+	if (slGetKey(SL_KEY_DOWN)) player2.posY += player2.speed * slGetDeltaTime();
+
+	if (slGetKey(SL_KEY_F1)) player1.posY -= player1.speed * slGetDeltaTime();
+	if (slGetKey(SL_KEY_F2)) player1.posY += player1.speed * slGetDeltaTime();
+
 	//if (IsKeyDown(KEY_UP)) player2.posY -= player2.speed * GetFrameTime();
 	//if (IsKeyDown(KEY_DOWN)) player2.posY += player2.speed * GetFrameTime();
 	//

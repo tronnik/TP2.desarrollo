@@ -19,9 +19,11 @@ int main(int args, char* argv[])
 		initValues(player1, player2);
 		initValues(ball);
 		
+		movePlayer(player1, player2);
 
 		drawPlayers();
 		drawBall();
+
 
 		slRender();
 	}
