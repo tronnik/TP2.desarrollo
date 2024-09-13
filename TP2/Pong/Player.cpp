@@ -1,33 +1,21 @@
 #include "Player.h"
 #include "sl.h"
 
+
 Player player1;
 Player player2;
 
 void initValues(Player& player1, Player& player2)
 {
-	player1.posX = 200;
-	player1.posY = 240;
-	player1.width = 100;
-	player1.height = 7;
-	player1.speed = 500.0f;
-	player1.score = 0;
+	player1.posX = 10;
+	player1.posY = screenHeight / 2;
+	player1.width = 15;
+	player1.height = 130;
 
-	player2.posX = 5.0f;
-	player2.posY = 5.0f;
-	player2.width = 25;
-	player2.height = 150;
-	player2.speed = 500.0f;
-	player2.score = 0;
-}
-
-void initPosition()
-{
-	//player1.posY = screenHeight / 2 - 50;
-	//player1.posX = screenWidth / 2 - 395;
-	//
-	//player2.posY = screenHeight / 2 - 50;
-	//player2.posX = screenWidth / 2 + 370;
+	player2.posX = 790;
+	player2.posY = screenHeight / 2;
+	player2.width = 15;
+	player2.height = 130;
 }
 
 void movePlayer(Player& player1, Player& player2)
@@ -54,10 +42,11 @@ void movePlayer(Player& player1, Player& player2)
 
 void drawPlayers()
 {
-	//slSetForeColor(1.0, 0.0, 0.0, 1.0);
+	slSetForeColor(1.0, 1.0, 1.0, 1.0);
 	slRectangleFill(player1.posX, player1.posY, player1.width, player1.height);
-	//DrawRectangle(player1.posX, player1.posY, player1.width, player1.height, WHITE);
-	//DrawRectangle(player2.posX, player2.posY, player2.width, player2.height, WHITE);
+	slRectangleFill(player2.posX, player2.posY, player2.width, player2.height);
+
+	
 	//DrawText(TextFormat(" : %01i", player2.score), (screenWidth / 2) - 30, screenHeightMin + 10, 20, RED);
 	//DrawText(TextFormat(" %01i", player1.score), (screenWidth / 2) - 50, screenHeightMin + 10, 20, RED);
 	//DrawText(TextFormat("Press enter to start"), (screenWidth / 2) - 120, screenHeightMin + 50, 20, WHITE);

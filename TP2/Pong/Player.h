@@ -1,5 +1,5 @@
 #pragma once
-
+#include "utils.h"
 struct Player
 {
 	double posX;
@@ -14,8 +14,6 @@ extern Player player1;
 extern Player player2;
 
 void initValues(Player& player1, Player& player2);
-
-void initPosition();
 
 void movePlayer(Player& player1, Player& player2);
 
