@@ -43,7 +43,6 @@ void movePlayer(Player& player1, Player& player2)
 
 	if (player1.posY >= screenHeight - 60)
 		player1.posY = screenHeight - 60;
-
 	
 }
 

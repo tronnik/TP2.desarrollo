@@ -1,26 +1,45 @@
 #include "Ball.h"
-
+#include "Player.h"
 Ball ball;
 
 void initValues(Ball& ball)
 {
 	ball.posX = screenWidth / 2;
 	ball.posY = screenHeight / 2;
-	ball.speed = 500;
+	ball.speedX = ball.speed;
+	ball.speedY = ball.speed;
 	ball.radius = 15;
 	ball.numVertex = 30;
+	ball.pause = false;
 }
 
 void moveBall(Ball& ball)
 {
-	if (slGetKey(SL_KEY_ENTER)) ball.pause = true;
-
+	if (slGetKey(SL_KEY_ENTER))	ball.pause = true;
+	
 	if (ball.pause)
 	{
 		ball.posY += ball.speedY * slGetDeltaTime();
 		ball.posX += ball.speedX * slGetDeltaTime();
 
+		if (ball.posY >= (screenHeight - ball.radius) || ball.posY <= ball.radius)
+			ball.speedY *= -1;
 
+		if (ball.posX >= (screenWidth - ball.radius) || ball.posX <= ball.radius)
+			{
+				ball.speedX *= -1;
+			
+				if (ball.posX >= (screenWidth - ball.radius))
+					player1.score++;
+			
+				if (ball.posX <= ball.radius)
+					player2.score++;
+			
+				ball.posY = screenHeight / 2;
+				ball.posX = screenHeight / 2 + 160;
+			
+				ball.pause = false;
+		}
 	}
 	//if (ball.pause)
 	//{

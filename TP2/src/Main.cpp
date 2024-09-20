@@ -21,7 +21,8 @@ int main(int args, char* argv[])
 
 		
 		movePlayer(player1, player2);
-
+		moveBall(ball);
+		
 		drawPlayers();
 		drawBall();
 
