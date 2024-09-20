@@ -1,16 +1,17 @@
 #include <iostream>
+#include "Game.h"
 #include "sl.h"
 #include "utils.h"
 #include "Player.h"
 #include "Ball.h"
+#include "GameplayScenes.h"
 
 
 int main(int args, char* argv[])
 {
 	slWindow(screenWidth, screenHeight, "Simple SIGIL Example", false);
 
-	initValues(player1, player2);
-	initValues(ball);
+	initGameplay();
 
 	while (!slShouldClose() && !slGetKey(SL_KEY_ESCAPE))
 	{
@@ -20,12 +21,9 @@ int main(int args, char* argv[])
 		ball;
 
 		
-		movePlayer(player1, player2);
-		moveBall(ball);
+		updateGameplay();
 		
-		drawPlayers();
-		drawBall();
-
+		drawGameplay();
 
 		slRender();
 	}
