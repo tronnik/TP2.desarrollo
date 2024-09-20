@@ -9,6 +9,9 @@ int main(int args, char* argv[])
 {
 	slWindow(screenWidth, screenHeight, "Simple SIGIL Example", false);
 
+	initValues(player1, player2);
+	initValues(ball);
+
 	while (!slShouldClose() && !slGetKey(SL_KEY_ESCAPE))
 	{
 		slSetBackColor(0.0, 0.0, 0.0);
@@ -16,8 +19,6 @@ int main(int args, char* argv[])
 		player2;
 		ball;
 
-		initValues(player1, player2);
-		initValues(ball);
 		
 		movePlayer(player1, player2);
 

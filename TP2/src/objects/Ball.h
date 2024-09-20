@@ -6,7 +6,7 @@ struct Ball
 {
 	double posX;
 	double posY;
-	const float speed = 700;
+	float speed;
 	float speedX;
 	float speedY;
 	double radius;

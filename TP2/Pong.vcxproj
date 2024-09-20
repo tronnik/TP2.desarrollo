@@ -19,20 +19,20 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\src\Game.h" />
-    <ClInclude Include="..\src\objects\Ball.h" />
-    <ClInclude Include="..\src\objects\Player.h" />
-    <ClInclude Include="..\src\objects\utils.h" />
-    <ClInclude Include="..\src\scenes\GameplayScenes.h" />
-    <ClInclude Include="..\src\scenes\MenuScenes.h" />
+    <ClInclude Include="src\Game.h" />
+    <ClInclude Include="src\objects\Ball.h" />
+    <ClInclude Include="src\objects\Player.h" />
+    <ClInclude Include="src\objects\utils.h" />
+    <ClInclude Include="src\scenes\GameplayScenes.h" />
+    <ClInclude Include="src\scenes\MenuScenes.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\Game.cpp" />
-    <ClCompile Include="..\src\Main.cpp" />
-    <ClCompile Include="..\src\objects\Ball.cpp" />
-    <ClCompile Include="..\src\objects\Player.cpp" />
-    <ClCompile Include="..\src\scenes\GameplayScenes.cpp" />
-    <ClCompile Include="..\src\scenes\MenuScenes.cpp" />
+    <ClCompile Include="src\Game.cpp" />
+    <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\objects\Ball.cpp" />
+    <ClCompile Include="src\objects\Player.cpp" />
+    <ClCompile Include="src\scenes\GameplayScenes.cpp" />
+    <ClCompile Include="src\scenes\MenuScenes.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
@@ -108,6 +108,9 @@
       <AdditionalLibraryDirectories>$(SolutionDir)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sigil.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "$(SolutionDir)sigil-vc2015\*.dll" "$(OutDir)"/y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -128,6 +131,9 @@
       <AdditionalDependencies>sigil.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <EntryPointSymbol>mainCRTStartup </EntryPointSymbol>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "$(SolutionDir)sigil-vc2015\*.dll" "$(OutDir)"/y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>

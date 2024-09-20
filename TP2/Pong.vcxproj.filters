@@ -15,42 +15,42 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\src\objects\Ball.h">
+    <ClInclude Include="src\objects\Ball.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\Game.h">
+    <ClInclude Include="src\Game.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\scenes\GameplayScenes.h">
+    <ClInclude Include="src\scenes\GameplayScenes.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\scenes\MenuScenes.h">
+    <ClInclude Include="src\scenes\MenuScenes.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\objects\Player.h">
+    <ClInclude Include="src\objects\Player.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\objects\utils.h">
+    <ClInclude Include="src\objects\utils.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\Main.cpp">
+    <ClCompile Include="src\Main.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Game.cpp">
+    <ClCompile Include="src\Game.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\scenes\MenuScenes.cpp">
+    <ClCompile Include="src\scenes\GameplayScenes.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\scenes\GameplayScenes.cpp">
+    <ClCompile Include="src\scenes\MenuScenes.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\objects\Player.cpp">
+    <ClCompile Include="src\objects\Player.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\objects\Ball.cpp">
+    <ClCompile Include="src\objects\Ball.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>

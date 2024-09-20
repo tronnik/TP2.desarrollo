@@ -23,30 +23,28 @@ void initValues(Player& player1, Player& player2)
 
 void movePlayer(Player& player1, Player& player2)
 {
-	if (slGetKey(SL_KEY_UP)) player2.posY -= player2.speed * slGetDeltaTime();
-	if (slGetKey(SL_KEY_DOWN)) player2.posY += player2.speed * slGetDeltaTime();
+	if (slGetKey(SL_KEY_DOWN)) player2.posY -= player2.speed * slGetDeltaTime();
+	if (slGetKey(SL_KEY_UP)) player2.posY += player2.speed * slGetDeltaTime();
 
-	if (slGetKey(SL_KEY_F1)) player1.posY -= player1.speed * slGetDeltaTime();
-	if (slGetKey(SL_KEY_F2)) player1.posY += player1.speed * slGetDeltaTime();
+	if (slGetKey('S')) player1.posY -= player1.speed * slGetDeltaTime();
+	if (slGetKey('W')) player1.posY += player1.speed * slGetDeltaTime();
 
-	//if (IsKeyDown(KEY_UP)) player2.posY -= player2.speed * GetFrameTime();
-	//if (IsKeyDown(KEY_DOWN)) player2.posY += player2.speed * GetFrameTime();
-	//
-	//if (IsKeyDown(KEY_W)) player1.posY -= player1.speed * GetFrameTime();
-	//if (IsKeyDown(KEY_S)) player1.posY += player1.speed * GetFrameTime();
-	//
-	////the racket cant go outsite of the window
-	//if (player1.posY < screenHeightMin)
-	//	player1.posY = screenHeightMin;
-	//
-	//if (player2.posY < screenHeightMin)
-	//	player2.posY = screenHeightMin;
-	//
-	//if (player1.posY + player1.height >= screenHeight)
-	//	player1.posY = screenHeight - player1.height;
-	//
-	//if (player2.posY + player2.height >= screenHeight)
-	//	player2.posY = screenHeight - player2.height;
+	if (player1.posY < screenHeightMin)
+		player1.posY = screenHeightMin;
+	
+	if (player2.posY < screenHeightMin)
+		player2.posY = screenHeightMin;
+	
+	if (player1.posY >= screenHeight)
+		player1.posY = screenHeight;
+
+	if (player2.posY  >= screenHeight - 60)
+		player2.posY = screenHeight - 60;
+
+	if (player1.posY >= screenHeight - 60)
+		player1.posY = screenHeight - 60;
+
+	
 }
 
 void drawPlayers()

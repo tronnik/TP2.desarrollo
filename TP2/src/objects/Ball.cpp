@@ -6,14 +6,22 @@ void initValues(Ball& ball)
 {
 	ball.posX = screenWidth / 2;
 	ball.posY = screenHeight / 2;
+	ball.speed = 500;
 	ball.radius = 15;
 	ball.numVertex = 30;
 }
 
 void moveBall(Ball& ball)
 {
-	//if (IsKeyPressed(KEY_ENTER)) ball.pause = true;
-	//
+	if (slGetKey(SL_KEY_ENTER)) ball.pause = true;
+
+	if (ball.pause)
+	{
+		ball.posY += ball.speedY * slGetDeltaTime();
+		ball.posX += ball.speedX * slGetDeltaTime();
+
+
+	}
 	//if (ball.pause)
 	//{
 	//	ball.posY += ball.speedY * GetFrameTime();
