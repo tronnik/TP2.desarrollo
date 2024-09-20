@@ -2,7 +2,7 @@
 
 void drawMenu()
 {
-	//slText((textX/2), (textY - 50),  )
+	slText((textX / 2), (textY - 50), "pong");
 	
 	//DrawText(TextFormat("Pong"), (screenWidth / 2) - 70, screenHeightMin + 70, 50, WHITE);
 	//DrawText(TextFormat("Press enter to start"), (screenWidth / 2) - 150, screenHeightMin + 250, 30, RED);

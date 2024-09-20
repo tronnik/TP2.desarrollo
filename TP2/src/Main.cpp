@@ -20,6 +20,7 @@ int main(int args, char* argv[])
 		player2;
 		ball;
 
+		drawMenu();
 		
 		updateGameplay();
 		
