@@ -2,7 +2,9 @@
 
 void drawMenu()
 {
-	slText((textX / 2), (textY - 50), "pong");
+	
+	slText((textX / 2 - 60), (textY - 100), "Pong");
+	slText((textX / 2 - 250), (textY - textY + 70), "Game by Valentin Villar");
 	
 	//DrawText(TextFormat("Pong"), (screenWidth / 2) - 70, screenHeightMin + 70, 50, WHITE);
 	//DrawText(TextFormat("Press enter to start"), (screenWidth / 2) - 150, screenHeightMin + 250, 30, RED);
@@ -11,16 +13,16 @@ void drawMenu()
 
 void drawGameOver()
 {
-	//DrawText(TextFormat("Game over"), (screenWidth / 2) - 100, screenHeightMin + 80, 30, RED);
-	//
-	//if (player1.score >= 10)
-	//{
-	//	DrawText(TextFormat("Player 1 win"), (screenWidth / 2) - 150, screenHeightMin + 200, 50, WHITE);
-	//}
-	//else if (player2.score >= 10)
-	//{
-	//	DrawText(TextFormat("Player 2 win"), (screenWidth / 2) - 150, screenHeightMin + 200, 50, WHITE);
-	//}
-	//
-	//DrawText(TextFormat("Press enter to game again"), (screenWidth / 2) - 150, screenHeight - 100, 20, WHITE);
+	slText((textX / 2 - 100), (textY - 100), "Game Over");
+	
+	if (player1.score >= 10)
+	{
+		slText((textX / 2 - 150), (textY - textY + 300), "player 1 win");
+	}
+	else if (player2.score >= 10)
+	{
+		slText((textX / 2 - 150), (textY - textY + 300), "player 2 win");
+	}
+	
+		slText((textX / 2 - 250), (textY - textY + 70), "Press enter to game again");
 }

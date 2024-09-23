@@ -6,14 +6,14 @@ Player player2;
 
 void initValues(Player& player1, Player& player2)
 {
-	player1.posX = 10;
+	player1.posX = 30; 
 	player1.posY = screenHeight / 2;
 	player1.width = 15;
 	player1.height = 130;
 	player1.speed = 500;
 	player1.score = 0;
 
-	player2.posX = 790;
+	player2.posX = 770;
 	player2.posY = screenHeight / 2;
 	player2.width = 15;
 	player2.height = 130;

@@ -109,9 +109,8 @@
       <AdditionalDependencies>sigil.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(SolutionDir)sigil-vc2015\*.dll" "$(OutDir)"/y
-
-xcopy "$(SolutionDir)res" "$(outDir)res" /i /y</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -134,9 +133,8 @@ xcopy "$(SolutionDir)res" "$(outDir)res" /i /y</Command>
       <EntryPointSymbol>mainCRTStartup </EntryPointSymbol>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(SolutionDir)sigil-vc2015\*.dll" "$(OutDir)"/y
-
-xcopy "$(SolutionDir)res" "$(outDir)res" /i /y</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

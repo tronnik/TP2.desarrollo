@@ -13,6 +13,8 @@ void initValues(Ball& ball)
 	ball.pause = false;
 }
 
+bool colision(Player& player, Ball& ball);
+
 void moveBall(Ball& ball)
 {
 	if (slGetKey(SL_KEY_ENTER))	ball.pause = true;
@@ -36,27 +38,22 @@ void moveBall(Ball& ball)
 				player2.score++;
 
 			ball.posY = screenHeight / 2;
-			ball.posX = screenHeight / 2 + 160;
+			ball.posX = screenWidth / 2;
 
 			ball.pause = false;
 		}
-
-		if ((ball.posX - ball.radius + ball.radius * 2 >= player1.posX &&
-			ball.posX - ball.radius <= player1.posX + player1.width &&
-			ball.posY - ball.radius + ball.radius * 2 >= player1.posY &&
-			ball.posY - ball.radius <= player1.posY + player1.height))
+		
+		if (colision(player2, ball))
 		{
 			ball.speedX *= -1;
-			ball.posX = player1.posX + player1.width + ball.radius;
+			ball.posX = player2.posX - ball.radius - player2.width / 2;
 		}
 
-		if ((ball.posX - ball.radius + ball.radius * 2 >= player2.posX &&
-			ball.posX - ball.radius <= player2.posX + player2.width &&
-			ball.posY - ball.radius + ball.radius * 2 >= player2.posY &&
-			ball.posY - ball.radius <= player2.posY + player2.height))
+		
+		if (colision(player1, ball))
 		{
 			ball.speedX *= -1;
-			ball.posX = player2.posX - ball.radius;
+			ball.posX = player1.posX + ball.radius + player1.width / 2;
 		}
 	}
 
@@ -65,4 +62,15 @@ void moveBall(Ball& ball)
 void drawBall()
 {
 	slCircleFill(ball.posX, ball.posY, ball.radius, ball.numVertex);
+}
+
+bool colision(Player& player, Ball& ball)
+{
+	bool colisionX = ball.posX + ball.radius > player.posX - player.width / 2 &&
+		ball.posX - ball.radius < player.posX + player.width / 2;
+
+	bool colisionY = ball.posY + ball.radius > player.posY - player.height / 2 &&
+		ball.posY - ball.radius < player.posY + player.height / 2;
+
+	return colisionX && colisionY;
 }
