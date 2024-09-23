@@ -8,12 +8,15 @@ static void close();
 bool menuOn = true;
 bool gameOver = false;
 int font;
+//int image;
 
 void run()
 {
 	
 	Initialization();
-	
+	loadImage();
+	loadBallImage();
+
 	while (!slShouldClose() && !slGetKey(SL_KEY_ESCAPE))
 	{
 		update();
@@ -28,6 +31,8 @@ void Initialization()
 	initGameplay();
 	font = slLoadFont("res/ParadiseSilhouette.ttf");
 	slSetFont(font, 24);
+
+	//image = slLoadTexture("res/RENDER02.png");
 }
 
 void update()

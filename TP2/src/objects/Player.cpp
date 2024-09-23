@@ -1,4 +1,5 @@
 #include "Player.h"
+#include <string>
 #include "sl.h"
 
 Player player1;
@@ -46,14 +47,37 @@ void movePlayer(Player& player1, Player& player2)
 	
 }
 
+void loadImage()
+{
+	player1.image = slLoadTexture("res/lance.png");
+	player2.image = slLoadTexture("res/lance.png");
+}
+
 void drawPlayers()
 {
-	slSetForeColor(1.0, 1.0, 1.0, 1.0);
-	slRectangleFill(player1.posX, player1.posY, player1.width, player1.height);
-	slRectangleFill(player2.posX, player2.posY, player2.width, player2.height);
-
 	
-	//DrawText(TextFormat(" : %01i", player2.score), (screenWidth / 2) - 30, screenHeightMin + 10, 20, RED);
-	//DrawText(TextFormat(" %01i", player1.score), (screenWidth / 2) - 50, screenHeightMin + 10, 20, RED);
-	//DrawText(TextFormat("Press enter to start"), (screenWidth / 2) - 120, screenHeightMin + 50, 20, WHITE);
+	
+
+	slSetForeColor(1.0, 1.0, 1.0, 1.0);
+	//slRectangleFill(player1.posX, player1.posY, player1.width, player1.height);
+
+	slSprite(player1.image, player1.posX, player1.posY, 200, player1.height);
+	slSprite(player2.image, player2.posX, player2.posY, 200, player2.height);
+
+	//slRectangleFill(player2.posX, player2.posY, player2.width, player2.height);
+
+	slText((textX / 2 - 60), (textY - 50), "Pong");//puntaje
+
+	slSetFontSize(50);
+	slText((textX / 2 - 150), (textY - 100), "Press enter to start");
+	
+	//int font = slLoadFont("res/ParadiseSilhouette.ttf");
+	//slSetFont(font, 14);
+	//
+	//string timerText = "Score: " + to_string(player1.score);
+	//slText(0.0, 20.0, timerText.c_str());
+	//
+	//string timerText = "Score: " + to_string(player2.score);
+	//slText(0.0, 20.0, timerText.c_str());	
 }
+

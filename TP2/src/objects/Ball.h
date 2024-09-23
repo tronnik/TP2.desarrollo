@@ -12,6 +12,7 @@ struct Ball
 	double radius;
 	int numVertex;
 	bool pause;
+	int image;
 };
 
 extern Ball ball;
@@ -19,6 +20,8 @@ extern Ball ball;
 void initValues(Ball& ball);
 
 void moveBall(Ball& ball);
+
+void loadBallImage();
 
 void drawBall();
 

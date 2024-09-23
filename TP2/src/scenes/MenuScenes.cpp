@@ -2,19 +2,17 @@
 
 void drawMenu()
 {
-	
 	slText((textX / 2 - 60), (textY - 100), "Pong");
+	slText((textX / 2 - 230), (textY - textY + 300), "Press enter to start");
 	slText((textX / 2 - 250), (textY - textY + 70), "Game by Valentin Villar");
-	
-	//DrawText(TextFormat("Pong"), (screenWidth / 2) - 70, screenHeightMin + 70, 50, WHITE);
-	//DrawText(TextFormat("Press enter to start"), (screenWidth / 2) - 150, screenHeightMin + 250, 30, RED);
-	//DrawText(TextFormat("Game By Valentin Villar"), (screenWidth / 2) - 120, screenHeight - 50, 20, WHITE);
 }
 
 void drawGameOver()
 {
+	slSetForeColor(1.0, 0.0, 0.0, 1.0);
 	slText((textX / 2 - 100), (textY - 100), "Game Over");
 	
+	slSetForeColor(1.0, 1.0, 1.0, 1.0);
 	if (player1.score >= 10)
 	{
 		slText((textX / 2 - 150), (textY - textY + 300), "player 1 win");
