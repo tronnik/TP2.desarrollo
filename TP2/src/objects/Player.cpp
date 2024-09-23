@@ -56,8 +56,6 @@ void loadImage()
 void drawPlayers()
 {
 	
-	
-
 	slSetForeColor(1.0, 1.0, 1.0, 1.0);
 	//slRectangleFill(player1.posX, player1.posY, player1.width, player1.height);
 

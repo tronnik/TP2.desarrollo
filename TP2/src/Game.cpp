@@ -8,7 +8,7 @@ static void close();
 bool menuOn = true;
 bool gameOver = false;
 int font;
-//int image;
+int winnerImage;
 
 void run()
 {
@@ -27,12 +27,12 @@ void run()
 
 void Initialization()
 {
-	slWindow(screenWidth, screenHeight, "Simple SIGIL Example", false);
+	slWindow(screenWidth, screenHeight, "Rei-bounce", false);
 	initGameplay();
-	font = slLoadFont("res/ParadiseSilhouette.ttf");
+	font = slLoadFont("res/OpenSans-Italic.ttf");
 	slSetFont(font, 24);
 
-	//image = slLoadTexture("res/RENDER02.png");
+	winnerImage = slLoadTexture("res/winner.png");
 }
 
 void update()
@@ -61,7 +61,7 @@ void update()
 void draw()
 {
 	slSetBackColor(0.0, 0.0, 0.0);
-	slSetFontSize(70);
+	slSetFontSize(50);
 	slSetForeColor(1.0, 1.0, 1.0, 1.0);
 
 	if (menuOn)
@@ -72,6 +72,7 @@ void draw()
 	else if (gameOver)
 	{
 		drawGameOver();
+		slSprite(winnerImage, (textX / 2 + 250), (textY - textY + 300), 100, 100);
 	}
 	else
 	{
