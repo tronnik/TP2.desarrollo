@@ -1,9 +1,12 @@
 #pragma once
 #include "Game.h"
 
-void initGameplay();
+namespace ReiBounce
+{
+	void initGameplay();
 
-void updateGameplay();
+	void updateGameplay();
 
-void drawGameplay();
+	void drawGameplay();
+}
 

@@ -1,6 +1,9 @@
 #pragma once
 #include "Game.h"
 
-void drawMenu();
-void drawGameOver();
+namespace ReiBounce
+{
+	void drawMenu();
+	void drawGameOver();
+}
 

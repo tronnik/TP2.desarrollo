@@ -1,27 +1,30 @@
 #pragma once
-#include <string>
+
 #include <iostream>
 #include "utils.h"
 
-struct Player
+namespace ReiBounce
 {
-	double posX;
-	double posY;
-	double width;
-	double height;
-	float speed;
-	int score;
-	int image;
-};
+	struct Player
+	{
+		double posX;
+		double posY;
+		double width;
+		double height;
+		float speed;
+		int score;
+		int image;
+	};
 
-extern Player player1;
-extern Player player2;
+	extern Player player1;
+	extern Player player2;
 
-void initValues(Player& player1, Player& player2);
+	void initValues(Player& player1, Player& player2);
 
-void movePlayer(Player& player1, Player& player2);
+	void movePlayer(Player& player1, Player& player2);
 
-void drawPlayers();
+	void drawPlayers();
 
-void loadImage();
+	void loadImage();
+}
 

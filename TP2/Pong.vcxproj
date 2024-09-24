@@ -133,8 +133,10 @@
       <EntryPointSymbol>mainCRTStartup </EntryPointSymbol>
     </Link>
     <PostBuildEvent>
-      <Command>
-      </Command>
+      <Command>copy "$(SolutionDir)lib\sigil-vc2015\glew32.dll" "$(OutDir)" /y
+copy "$(SolutionDir)lib\sigil-vc2015\OpenAL32.dll" "$(OutDir)" /y
+copy "$(SolutionDir)lib\sigil-vc2015\sigil.dll" "$(OutDir)" /y
+copy "$(SolutionDir)lib\sigil-vc2015\wrap_oal.dll" "$(OutDir)" /y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

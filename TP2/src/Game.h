@@ -6,6 +6,9 @@
 #include "GameplayScenes.h"
 #include "MenuScenes.h"
 
+namespace ReiBounce
+{
+	void run();
+}
 
-void run();
 
