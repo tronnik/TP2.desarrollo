@@ -2,6 +2,7 @@
 
 void drawMenu()
 {
+	slSetForeColor(0.0, 0.0, 0.0, 1.0);
 	slText((textX / 2 - 120), (textY - 100), "Rei-bounce");
 	slText((textX / 2 - 200), (textY - textY + 300), "Press enter to start");
 	slText((textX / 2 - 250), (textY - textY + 70), "Game by Valentin Villar");

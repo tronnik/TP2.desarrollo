@@ -9,6 +9,7 @@ bool menuOn = true;
 bool gameOver = false;
 int font;
 int winnerImage;
+int backgroundImage;
 
 void run()
 {
@@ -33,6 +34,7 @@ void Initialization()
 	slSetFont(font, 24);
 
 	winnerImage = slLoadTexture("res/winner.png");
+	backgroundImage = slLoadTexture("res/back.jpg");
 }
 
 void update()
@@ -66,6 +68,7 @@ void draw()
 
 	if (menuOn)
 	{
+		slSprite(backgroundImage, textX / 2 , textY / 2, 1000, 1000);
 		drawMenu();
 		if (slGetKey(SL_KEY_ENTER)) menuOn = false;
 	}

@@ -48,7 +48,6 @@ void moveBall(Ball& ball)
 			ball.speedX *= -1;
 			ball.posX = player2.posX - ball.radius - player2.width / 2;
 		}
-
 		
 		if (colision(player1, ball))
 		{
@@ -66,7 +65,7 @@ void loadBallImage()
 
 void drawBall()
 {
-	slSprite(ball.image, ball.posX, ball.posY, 100, 100);
+	slSprite(ball.image, ball.posX, ball.posY, 80, 80);
 }
 
 bool colision(Player& player, Ball& ball)
