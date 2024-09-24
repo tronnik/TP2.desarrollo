@@ -57,17 +57,14 @@ void drawPlayers()
 {
 	
 	slSetForeColor(1.0, 1.0, 1.0, 1.0);
-	//slRectangleFill(player1.posX, player1.posY, player1.width, player1.height);
 
 	slSprite(player1.image, player1.posX, player1.posY, 200, player1.height);
 	slSprite(player2.image, player2.posX, player2.posY, 200, player2.height);
 
-	//slRectangleFill(player2.posX, player2.posY, player2.width, player2.height);
-
 	slText((textX / 2 - 60), (textY - 50), "Pong");//puntaje
 
-	slSetFontSize(50);
-	slText((textX / 2 - 150), (textY - 100), "Press enter to start");
+	slSetFontSize(20);
+	slText((textX / 2 - 90), (textY - 80), "Press enter to start");
 	
 	//int font = slLoadFont("res/ParadiseSilhouette.ttf");
 	//slSetFont(font, 14);

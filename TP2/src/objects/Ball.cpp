@@ -66,7 +66,6 @@ void loadBallImage()
 
 void drawBall()
 {
-	//slCircleFill(ball.posX, ball.posY, ball.radius, ball.numVertex);
 	slSprite(ball.image, ball.posX, ball.posY, 100, 100);
 }
 
