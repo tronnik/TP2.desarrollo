@@ -63,7 +63,7 @@ namespace ReiBounce
 		slSprite(player2.image, player2.posX, player2.posY, 200, player2.height);
 
 		slSetFontSize(20);
-		slText((textX / 2 - 70), (textY - 80), "Press enter to start");
+		slText((textX / 2 - 70), (textY - 80), "Press space to start");
 
 		slSetFontSize(40);
 		string scoreText1 = " " + to_string(player1.score);

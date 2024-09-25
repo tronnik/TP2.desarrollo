@@ -20,7 +20,7 @@ namespace ReiBounce
 
 	void moveBall(Ball& ball)
 	{
-		if (slGetKey(SL_KEY_ENTER))	ball.pause = true;
+		if (slGetKey(32))	ball.pause = true;
 
 		if (ball.pause)
 		{
